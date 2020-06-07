@@ -1,0 +1,51 @@
+#container {
+	
+}
+
+#container h1 {
+	font-size: 1.5rem;
+}
+
+#container .row {
+	border-bottom: 1px solid var(--grey04);
+	display: flex;
+	padding-bottom: 7px;
+}
+#container .section {
+	flex: 2;
+	margin: 0.25rem;
+}
+#container .section.deaths {
+	margin-left: 0.5rem;
+}
+
+#container .metric {
+	color: var(--grey02);
+	font-size: 0.9rem;
+	text-transform: uppercase;
+}
+
+#container .big-num {
+	font-family: Shift-BoldItalic;
+	font-size: 2rem;
+	margin-top: 7px;
+}
+
+#container .active .big-num {
+	color: var(--blue01);
+}
+
+#container .recovered .big-num {
+	color: var(--green01);
+}
+
+#container .deaths .big-num {
+	color: var(--black);
+}
+
+#container .last-update {
+	color: var(--grey02);
+	font-family: BentonSansCond-RegItalic;
+	font-size: 0.8rem;
+	padding-top: 5px;
+}
