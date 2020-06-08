@@ -1,3 +1,4 @@
+import helper from '../../helper-functions';
 import './topline.css';
 
 // vars
@@ -8,10 +9,6 @@ const init = async (data, el) => {
 	const template = toplineTemplate(data[0]);
 	// append to element.
 	document.getElementById(el).innerHTML = template;
-}
-
-function numberWithCommas(x) {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
 function toplineTemplate(d) {
@@ -25,15 +22,15 @@ function toplineTemplate(d) {
 			<div class="row">
 				<div class="section active">
 					<p class="metric">Active cases</p>
-					<p class="big-num">${numberWithCommas(parseInt(d.numconf) - parseInt(d.numdeaths) - parseInt(d.numrecover))}</p>
+					<p class="big-num">${helper.numberWithCommas(d.active_cases + parseInt(d.numprob))}</p>
 				</div>
 				<div class="section deaths">
 					<p class="metric">Deaths</p>
-					<p class="big-num">${numberWithCommas(d.numdeaths)}</p>
+					<p class="big-num">${helper.numberWithCommas(d.numdeaths)}</p>
 				</div>
 				<div class="section recovered">
 					<p class="metric">Recovered</p>
-					<p class="big-num">${numberWithCommas(d.numrecover)}</p>
+					<p class="big-num">${helper.numberWithCommas(d.numrecover)}</p>
 				</div>
 			</div>
 			<p class="last-update">Last updated: ${last_update}</p>

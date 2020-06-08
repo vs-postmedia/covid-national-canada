@@ -1,3 +1,7 @@
+:root {
+	max-width: 500px;
+	margin: 0 auto;
+}
 .benton-reg {
 	font-family: BentonSansCond-Regular;
 }
@@ -61,6 +65,7 @@
 #app .source a {
 	color: inherit;
 }
+
 
 
 

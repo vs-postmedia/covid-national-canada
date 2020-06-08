@@ -1,3 +1,4 @@
+import helper from '../../helper-functions'
 import provLookup from '../../../data/prov-codes.json';
 import css from './provinces-table.css';
 
@@ -35,17 +36,14 @@ function closeTable() {
 	`;
 }
 
-function numberWithCommas(x) {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-}
-
 function prepTable() {
 	return `
+
 		<table id="table-container">
 			<thead>
 				<tr>
 					<th class="province">Province</th>
-					<th class="cases-million">Cases per million</th>
+					<th class="cases-million">Active cases per million</th>
 					<th class="active">Active Cases</th>
 					<th class="deaths">Deaths</th>
 					<th class="recovered">Recovered</th>
@@ -63,16 +61,17 @@ function rowTemplate(d) {
 	return `
 		<tr>
 			<td class="province">${name}</td>
-			<td class="cases-million">${numberWithCommas(d.active_cases_per_million)}</td>
-			<td class="active">${numberWithCommas(d.active_cases + parseInt(d.numprob))}</td>
-			<td class="deaths">${numberWithCommas(d.numdeaths)}</td>
-			<td class="recovered">${numberWithCommas(d.numrecover)}</td>
+			<td class="cases-million">${helper.numberWithCommas(d.active_cases_per_million)}</td>
+			<td class="active">${helper.numberWithCommas(d.active_cases + parseInt(d.numprob))}</td>
+			<td class="deaths">${helper.numberWithCommas(d.numdeaths)}</td>
+			<td class="recovered">${helper.numberWithCommas(d.numrecover)}</td>
 		</tr>
 	`;
 }
 
-Number.prototype.map = function (in_min, in_max, out_min, out_max) {
-	return (this - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
-}
+// HELPER FUNCTIONS
+
 
 export default init;
+
+// <h3>Active COVID-19 cases, deaths and recoveries by province</h3>

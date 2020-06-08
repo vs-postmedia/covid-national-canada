@@ -1,5 +1,6 @@
 #table-container {
 	margin-top: 15px;
+	max-width: $max-width;
 }
 
 
@@ -41,15 +42,18 @@
 
 #table-container td.active,
 #table-container td.cases-million {
-	background-color: var(--blue06);
+	background-color: var(--blue03);
+	color: #FFF;
 }
 
 #table-container td.deaths {
-	background-color: var(--grey04);
+	background-color: var(--grey01);
+	color: #FFF;
 }
 
 #table-container td.recovered {
-	background-color: var(--green06);
+	background-color: var(--green03);
+	color: #FFF;
 }
 
 #table-container .hide-mobile {
