@@ -1,0 +1,53 @@
+[{
+	"code": "AB",
+	"short": "Alta.",
+	"name": "Alberta"
+},{
+	"code": "BC",
+	"short": "B.C.",
+	"name": "British Columbia"
+},{
+	"code": "SK",
+	"short": "Sask.",
+	"name": "Saskatchewan"
+},{
+	"code": "MB",
+	"short": "Man.",
+	"name": "Manitoba"
+},{
+	"code": "ON",
+	"short": "Ont.",
+	"name": "Ontario"
+},{
+	"code": "QC",
+	"short": "Que.",
+	"name": "Quebec"
+},{
+	"code": "NB",
+	"short": "N.B.",
+	"name": "New Brunswick"
+},{
+	"code": "NS",
+	"short": "N.S.",
+	"name": "Nova Scotia"
+},{
+	"code": "NL",
+	"short": "N.L.",
+	"name": "Newfoundland and Labrador"
+},{
+	"code": "NT",
+	"short": "N.W.T.",
+	"name": "Northwest Territories"
+},{
+	"code": "NU",
+	"short": "Nvt.",
+	"name": "Nunavut"
+},{
+	"code": "PE",
+	"short": "P.E.I.",
+	"name": "Prince Edward Island"
+},{
+	"code": "YT",
+	"short": "Y.T.",
+	"name": "Yukon"
+}]

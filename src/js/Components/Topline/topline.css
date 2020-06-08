@@ -21,7 +21,7 @@
 
 #container .metric {
 	color: var(--grey02);
-	font-size: 0.9rem;
+	font-size: 0.8rem;
 	text-transform: uppercase;
 }
 
@@ -48,4 +48,18 @@
 	font-family: BentonSansCond-RegItalic;
 	font-size: 0.8rem;
 	padding-top: 5px;
+	text-align: right;
+}
+
+
+
+
+@media only screen and (min-width: 600px) {
+    #container .metric {
+    	font-size: 1rem;
+    }
+    #container .big-num {
+		font-size: 3rem;
+		margin-top: 15px;
+	}
 }

@@ -4,10 +4,6 @@ import './topline.css';
 const months = ['Jan.', 'Feb.', 'Mar.', 'Apr.', 'May', 'June', 'July', 'Aug.', 'Sept.', 'Oct.', 'Nov.', 'Dec.'];
 
 const init = async (data, el) => {
-	console.log('topline!')
-
-	console.log(data[0], el)
-
 	// build the template
 	const template = toplineTemplate(data[0]);
 	// append to element.
@@ -28,7 +24,7 @@ function toplineTemplate(d) {
 			<h1>COVID-19 in Canada</h1>
 			<div class="row">
 				<div class="section active">
-					<p class="metric">Active</p>
+					<p class="metric">Active cases</p>
 					<p class="big-num">${numberWithCommas(parseInt(d.numconf) - parseInt(d.numdeaths) - parseInt(d.numrecover))}</p>
 				</div>
 				<div class="section deaths">
