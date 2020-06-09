@@ -2,7 +2,7 @@ import helper from '../../helper-functions';
 import './topline.css';
 
 // vars
-const months = ['Jan.', 'Feb.', 'Mar.', 'Apr.', 'May', 'June', 'July', 'Aug.', 'Sept.', 'Oct.', 'Nov.', 'Dec.'];
+
 
 const init = async (data, el) => {
 	// build the template
@@ -14,7 +14,7 @@ const init = async (data, el) => {
 function toplineTemplate(d) {
 	// const date = new Date(d.js_date);
 	const date = d.date.split('-');
-	const last_update = `${months[parseInt(date[1]) - 1]} ${parseInt(date[0])}, ${date[2]}`
+	const last_update = `${helper.months[parseInt(date[1]) - 1]} ${parseInt(date[0])}, ${date[2]}`
 
 	return `
 		<div id="container">

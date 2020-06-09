@@ -1,6 +1,6 @@
 #table-container {
 	margin-top: 15px;
-	max-width: $max-width;
+	max-width: var(--max-width);
 }
 
 
@@ -46,15 +46,65 @@
 	color: #FFF;
 }
 
+#table-container td.active.weight-1,
+#table-container td.cases-million.weight-1 {
+	background-color: var(--blue01);
+}
+#table-container td.active.weight-2,
+#table-container td.cases-million.weight-2 {
+	background-color: var(--blue02);
+}
+#table-container td.active.weight-3,
+#table-container td.cases-million.weight-3 {
+	background-color: var(--blue03);
+}
+#table-container td.active.weight-4,
+#table-container td.cases-million.weight-4 {
+	background-color: var(--blue04);
+}
+#table-container td.active.weight-5,
+#table-container td.cases-million.weight-5 {
+	background-color: var(--blue05);
+}
+
+
 #table-container td.deaths {
 	background-color: var(--grey01);
 	color: #FFF;
 }
 
+#table-container td.deaths.weight-1 {
+	background-color: var(--grey01);
+}
+#table-container td.deaths.weight-2 {
+	background-color: var(--grey02);
+}
+#table-container td.deaths.weight-3, 
+#table-container td.deaths.weight-4 {
+	background-color: var(--grey03);
+}
+
+
 #table-container td.recovered {
-	background-color: var(--green03);
 	color: #FFF;
 }
+
+#table-container td.recovered.weight-1 {
+	background-color: var(--green01);
+}
+#table-container td.recovered.weight-2 {
+	background-color: var(--green02);
+}
+#table-container td.recovered.weight-3 {
+	background-color: var(--green03);
+}
+#table-container td.recovered.weight-4 {
+	background-color: var(--green04);
+}
+#table-container td.recovered.weight-5 {
+	background-color: var(--green05);
+}
+
 
 #table-container .hide-mobile {
 	display: none;
