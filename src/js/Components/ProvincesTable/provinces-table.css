@@ -59,7 +59,7 @@
 #table-container .deaths p {
 	color: #FFF;
 }
-#table-container td.recovered {
+#table-container .recovered p {
 	color: #FFF;
 }
 

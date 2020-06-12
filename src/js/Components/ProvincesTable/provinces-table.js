@@ -26,8 +26,6 @@ const init = async (data, el) => {
 		value.sort((a,b) => b - a);
 	}
 
-	console.log(data)
-
 	// build the table rows
 	data.forEach(d => {
 		tableRows += rowTemplate(d);
