@@ -35,6 +35,7 @@
 
 #app footer {
 	display: flex;
+	margin-top: 10px;
 }
 
 #app footer > p {
