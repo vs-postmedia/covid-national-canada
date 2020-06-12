@@ -26,6 +26,8 @@ const init = async (data, el) => {
 		value.sort((a,b) => b - a);
 	}
 
+	console.log(data)
+
 	// build the table rows
 	data.forEach(d => {
 		tableRows += rowTemplate(d);
@@ -85,13 +87,26 @@ function rowTemplate(d) {
 	const deathsRange = `${Math.round(helper.map(parseInt(d.numdeaths), 0, values['deaths'][0], 3, 0) + 1)}`;
 	const recoveredRange = `${Math.round(helper.map(parseInt(d.numrecover), 0, values['recovered'][0], 4, 0) + 1)}`;
 
+	const newToday = parseInt(d.numtoday) > 0 ? d.numtoday : 0;
+	const deathsToday = parseInt(d.deathstoday) > 0 ? d.deathstoday : 0;
+
 	return `
 		<tr>
 			<td class="province">${name}</td>
-			<td class="cases-million weight-${activePerMilRange}">${helper.numberWithCommas(d.active_cases_per_million)}</td>
-			<td class="active weight-${activeRange}">${helper.numberWithCommas(d.active_cases + parseInt(d.numprob))}</td>
-			<td class="deaths weight-${deathsRange}">${helper.numberWithCommas(d.numdeaths)}</td>
-			<td class="recovered weight-${recoveredRange}">${helper.numberWithCommas(d.numrecover)}</td>
+			<td class="cases-million weight-${activePerMilRange}">
+				<p class="total-num">${helper.numberWithCommas(d.active_cases_per_million)}</p>
+			</td>
+			<td class="active weight-${activeRange}">
+				<p class="total-num">${helper.numberWithCommas(d.active_cases + parseInt(d.numprob))}</p>
+				<p>${newToday} new</p>
+			</td>
+			<td class="deaths weight-${deathsRange}">
+				<p class="total-num">${helper.numberWithCommas(d.numdeaths)}</p>
+				<p>${deathsToday} new</p>
+			</td>
+			<td class="recovered weight-${recoveredRange}">
+				<p class="total-num">${helper.numberWithCommas(d.numrecover)}</p>
+			</td>
 		</tr>
 	`;
 }

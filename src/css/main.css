@@ -1,18 +1,7 @@
-:root {
-	max-width: 500px;
+#app {
 	margin: 0 auto;
+	overflow-y: auto;
 }
-.benton-reg {
-	font-family: BentonSansCond-Regular;
-}
-.benton-ital {
-	font-family: BentonSansCond-BoldItalic;
-}
-
-.sun-icon {
-	background: url('../images/sun.png');
-}
-
 
 /* POSTMEDIA STYLES */
 #app h1 {

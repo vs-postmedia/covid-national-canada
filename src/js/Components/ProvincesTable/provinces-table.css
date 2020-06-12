@@ -1,12 +1,16 @@
 #table-container {
 	margin-top: 15px;
 	max-width: var(--max-width);
+	table-layout: fixed;
 }
 
 
 #table-container thead th,
 #table-container tbody td {
 	text-align: right;
+	vertical-align: top;
+}
+#table-container thead th {
 	vertical-align: bottom;
 }
 
@@ -29,23 +33,42 @@
 	font-size: 0.9rem;
 	padding-bottom: 15px;
 }
-#table-container thead .province,
-#table-container tbody .province {
-	/*text-align: left;*/
-}
+
 
 #table-container td {
 	font-family: BentonSansCond-Regular;
 	font-size: 0.8rem;
 	padding: 0.5rem 3px;
+	width: 20%;
 }
 
-#table-container td.active,
-#table-container td.cases-million {
-	background-color: var(--blue03);
+#table-container tbody .province {
+	font-size: 1.1rem;
+}
+
+
+#table-container .total-num {
+	font-size: 1rem;
+}
+
+/* cell text colour */
+#table-container .active p,
+#table-container .cases-million p {
+	color: #FFF;
+}
+#table-container .deaths p {
+	color: #FFF;
+}
+#table-container td.recovered {
 	color: #FFF;
 }
 
+
+#table-container .hide-mobile {
+	display: none;
+}
+
+/* cell backgrounds */
 #table-container td.active.weight-1,
 #table-container td.cases-million.weight-1 {
 	background-color: var(--blue01);
@@ -66,13 +89,6 @@
 #table-container td.cases-million.weight-5 {
 	background-color: var(--blue05);
 }
-
-
-#table-container td.deaths {
-	background-color: var(--grey01);
-	color: #FFF;
-}
-
 #table-container td.deaths.weight-1 {
 	background-color: var(--grey01);
 }
@@ -83,12 +99,6 @@
 #table-container td.deaths.weight-4 {
 	background-color: var(--grey03);
 }
-
-
-#table-container td.recovered {
-	color: #FFF;
-}
-
 #table-container td.recovered.weight-1 {
 	background-color: var(--green01);
 }
@@ -106,13 +116,14 @@
 }
 
 
-#table-container .hide-mobile {
-	display: none;
-}
 
 
 @media only screen and (min-width: 600px) {
     #table-container .hide-mobile {
 		display: block;
+	}
+	#table-container tbody .province {
+		font-size: 1.1rem;
+		width: 30%;
 	}
 }
