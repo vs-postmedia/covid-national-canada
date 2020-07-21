@@ -288,7 +288,7 @@ var tableEl = 'table'; // this needs to be an element ID
 
 var toplineEl = 'topline'; // this needs to be an element ID
 
-var dataUrl = 'https://storage.googleapis.com/vs-postmedia-data/covid-healthcanada-data.json';
+var dataUrl = 'https://vs-postmedia-data.sfo2.digitaloceanspaces.com/covid-active-cases.json';
 
 var src_init = /*#__PURE__*/function () {
   var _ref = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee() {
