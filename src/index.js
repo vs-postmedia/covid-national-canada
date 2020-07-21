@@ -13,7 +13,7 @@ import provincesTable from './js/Components/ProvincesTable/provinces-table';
 // VARS
 const tableEl = 'table'; // this needs to be an element ID
 const toplineEl = 'topline'; // this needs to be an element ID
-const dataUrl = 'https://vs-postmedia-data.sfo2.digitaloceanspaces.com/covid-active-cases.json';
+const dataUrl = 'https://vs-postmedia-data.sfo2.digitaloceanspaces.com/covid-healthcanada-data.json';
 
 const init = async () => {
 	// fetch & prep data
