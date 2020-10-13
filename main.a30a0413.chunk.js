@@ -304,7 +304,7 @@ var src_init = /*#__PURE__*/function () {
             resp = _context.sent;
             // exclude national & repatriated for the table
             tableData = resp.data.filter(function (d) {
-              return d.pruid !== '1' && d.pruid !== '99' && d.pruid !== '12';
+              return d.pruid !== '1' && d.pruid !== '99';
             });
             sortedData = tableData.sort(function (a, b) {
               return parseInt(b.active_cases_per_million) - parseInt(a.active_cases_per_million);
