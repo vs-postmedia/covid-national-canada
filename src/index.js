@@ -20,8 +20,8 @@ const init = async () => {
 	const resp = await axios.get(dataUrl);
 
 	// exclude national & repatriated for the table
-	const tableData = resp.data.filter(d => d.pruid !== '1' && d.pruid !== '99' && d.pruid !== '12')
-	const sortedData = tableData.sort((a,b) => parseInt(b.active_cases_per_million) - parseInt(a.active_cases_per_million))
+	const tableData = resp.data.filter(d => d.pruid !== '1' && d.pruid !== '99');
+	const sortedData = tableData.sort((a,b) => parseInt(b.active_cases_per_million) - parseInt(a.active_cases_per_million));
 
 	// canada-wide numbers
 	topline(resp.data.filter(d => d.prname === 'Canada'), toplineEl);
