@@ -95,7 +95,7 @@ function rowTemplate(d) {
 				<p class="total-num">${helper.numberWithCommas(d.active_cases_per_million)}</p>
 			</td>
 			<td class="active weight-${activeRange}">
-				<p class="total-num">${helper.numberWithCommas(d.active_cases + parseInt(d.numprob))}</p>
+				<p class="total-num">${helper.numberWithCommas(d.active_cases)}</p>
 				<p>${newToday} new</p>
 			</td>
 			<td class="deaths weight-${deathsRange}">

@@ -22,7 +22,7 @@ function toplineTemplate(d) {
 			<div class="row">
 				<div class="section active">
 					<p class="metric">Active cases</p>
-					<p class="big-num">${helper.numberWithCommas(d.active_cases + parseInt(d.numprob))}</p>
+					<p class="big-num">${helper.numberWithCommas(d.active_cases)}</p>
 				</div>
 				<div class="section deaths">
 					<p class="metric">Deaths</p>
